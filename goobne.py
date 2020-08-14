@@ -10,7 +10,7 @@ def GoobneAddress(result):
     driver.get(url)
     time.sleep(4)
     for page in count():
-        %s)'%str(page+1))
+        driver.execute_script('store.getList(%s)'%str(page+1))
         time.sleep(2)
         rcv_data = driver.page_source
         soupData = BeautifulSoup(rcv_data, 'html.parser')
